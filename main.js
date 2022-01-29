@@ -2,7 +2,7 @@ const navBarButton = document.querySelector('.header_nav');
 navBarButton.addEventListener("click", ()=>{
     document.querySelector('.menuWrapper').classList.remove('closeNavMenu');
     document.querySelector('.menuWrapper').classList.add('loadingNavMenu');
-    document.querySelector('.all_content').style.display = 'none';
+    document.querySelector('.fullPage').style.display = 'none';
     document.querySelector('.menuWrapper').style.display = 'block';
 })
 
@@ -12,7 +12,7 @@ navMenuButton.addEventListener("click", ()=>{
     document.querySelector('.menuWrapper').classList.add('closeNavMenu');
     setTimeout(()=>{
       document.querySelector('.menuWrapper').style.display = 'none';
-      document.querySelector('.all_content').style.display = 'block';
+      document.querySelector('.fullPage').style.display = 'block';
     }, 1950);
 });
 
@@ -23,8 +23,9 @@ const justPlay = document.querySelector('.playBtn');
 const next = document.querySelector('.nextBtn');
 
 const audio1 = new Audio('./main-page-src-files/music-files/music1.mp3');
+const audio2 = new Audio('../main-page-src-files/music-files/music2.mp3');
 
-let audioList = [audio1];
+let audioList = [audio1, audio2];
 
 let isPlaying = false;
 let currentSong = 0;

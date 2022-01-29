@@ -16,6 +16,20 @@ navMenuButton.addEventListener("click", ()=>{
     }, 1950);
 });
 
+const songs = document.querySelectorAll('.songBox');
+let last;
+let index;
+songs.forEach((elem)=>{
+  elem.addEventListener('click', ()=>{
+    index = +elem.getAttribute('data-index');
+    audioList.forEach(element=>{
+      element.pause();
+      element.currentTime = 0;
+    })
+    audioList[index].play();
+  });
+})
+
 // PLAYER LOGIC
 const currentSongNumber = document.querySelector('.currentSongNumber');
 const previous = document.querySelector('.prevBtn');
@@ -23,8 +37,9 @@ const justPlay = document.querySelector('.playBtn');
 const next = document.querySelector('.nextBtn');
 
 const audio1 = new Audio('../main-page-src-files/music-files/music1.mp3');
+const audio2 = new Audio('../main-page-src-files/music-files/music2.mp3');
 
-let audioList = [audio1];
+let audioList = [audio1, audio2];
 
 let isPlaying = false;
 let currentSong = 0;
