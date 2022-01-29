@@ -26,6 +26,10 @@ songs.forEach((elem)=>{
       element.currentTime = 0;
     });
     audioList[index].play();
+    songs.forEach(elem=>{
+      elem.children[1].children[1].style.display = 'none';
+    });
+    elem.children[1].children[1].style.display = 'block';
   });
 });
 
