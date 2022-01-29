@@ -46,7 +46,7 @@ const audio8 = new Audio('../main-page-src-files/music-files/music8.mp3');
 const audio9 = new Audio('../main-page-src-files/music-files/music9.mp3');
 const audio10 = new Audio('../main-page-src-files/music-files/music10.mp3');
 
-let audioList = [audio1, audio2];
+let audioList = [audio1, audio2, audio3, audio4, audio5, audio6, audio7, audio8, audio9, audio10];
 
 let isPlaying = false;
 let currentSong = 0;
