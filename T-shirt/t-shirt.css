@@ -1,0 +1,126 @@
+body {
+  font-family: Arial;
+  color: rgb(8, 0, 0);
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: snow;
+
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  margin-right: 200px;
+}
+#outer{
+  width:100%;
+  text-align: right;
+}
+.started{
+  display: inline-block;
+  z-index: 1;
+}
+.right {
+  right: 0;
+  padding-left: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150;
+  border-radius: 50%;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: rgb(7, 0, 0);
+  color: black;
+}
+.previous {
+  background-color: #070000;
+  color: rgb(253, 253, 253);
+}
+.round {
+  border-radius: 50%;
+}
+.label {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+.garbage_button {
+  display: inline-block;
+  list-style: none; 
+  padding: 0.35em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #df5302;
+  text-align: center;
+  transition: all 0.2s;
+  font-weight: bold;
+}
+#items #badge { /* hides the count badge on the shopping list */ 
+  display: none; 
+} 
+.garbage_button:hover {
+  color: #ffffff;
+  background-color: #e40505;
+}
+@media all and (max-width: 30em) {
+  a.garbage_button {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+.basketNum {
+  list-style: none;
+
+ color: white;
+ z-index: 0;
+}
+#badge {
+  z-index: 1;
+   width: 20px; 
+   height: 20px; 
+   background-color: #f0ad4e; 
+   color: white; 
+   padding: 2px 2px; 
+   border-radius: 5px; 
+   margin-left: 10px; 
+   text-align: center; 
+   float: right; 
+   }
