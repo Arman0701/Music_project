@@ -25,21 +25,6 @@ a {
     padding: 15px;
     cursor: pointer;
 }
-.sortMenu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-}
-.sortMenu p {
-    margin: 0 10px;
-    padding: 3px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.sortMenu p:hover {
-    color: crimson;
-}
 .header_nav {
     cursor: pointer;
     width: 10%;
@@ -81,28 +66,6 @@ a {
 .songName {
     font-size: 17px;
     margin-top: 10px;
-}
-.playerWrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 20px;
-}
-.player {
-    display: flex;
-}
-.prevBtn, .playBtn, .nextBtn {
-    padding: 10px;
-    background:none;
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    transition: 0.3s;
-}
-.prevBtn:hover, .playBtn:hover, .nextBtn:hover {
-    border-color: black;
-    transform: scale(1.1);
 }
 
 /* NAVIGATION MENU */
