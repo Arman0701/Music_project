@@ -1,3 +1,3 @@
-window.onloaf = ()=>{
-    
+window.onload = ()=>{
+
 }
