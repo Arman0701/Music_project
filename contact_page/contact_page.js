@@ -20,3 +20,40 @@ function clear(){
    });
    textarea.value = '';
 }
+
+const navigationMain = document.querySelector('.navigationMain');
+navigationMain.addEventListener("click", ()=>{
+    document.querySelector('.menuWrapper').classList.remove('closeNavMenu');
+    document.querySelector('.menuWrapper').classList.add('loadingNavMenu');
+    document.querySelector('.allContent').style.display = 'none';
+    document.querySelector('.menuWrapper').style.display = 'block';
+})
+
+const navMenuButton = document.querySelector('.navMenu');
+navMenuButton.addEventListener("click", ()=>{
+    document.querySelector('.menuWrapper').classList.remove('loadingNavMenu');
+    document.querySelector('.menuWrapper').classList.add('closeNavMenu');
+    setTimeout(()=>{
+      document.querySelector('.menuWrapper').style.display = 'none';
+      document.querySelector('.allContent').style.display = 'block';
+    }, 1950);
+});
+
+// NAVIGATION MENU
+const menuBG = document.querySelector('.menuBG');
+const menuList = document.querySelectorAll('.listItem'); 
+
+menuList.forEach(elem => {
+    elem.addEventListener('mouseover', (event)=>{
+        menuBG.innerHTML = event.target.innerHTML;
+        menuBG.classList.add('breath');
+    })
+});
+
+menuList.forEach(elem => {
+    elem.addEventListener('mouseout', ()=>{
+        menuBG.innerHTML = '';
+        menuBG.classList.remove('breath');
+    })                                               
+});
+
