@@ -205,6 +205,11 @@ a {
     text-align: right;
     font-size: 17px;
 }
+.fa-heart {
+    color: crimson;
+    font-size: 17px;
+    margin-right: 10px;
+}
 
 @keyframes menuListAnim {
     0% {
