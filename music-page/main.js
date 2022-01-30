@@ -25,19 +25,21 @@ songs.forEach((elem)=>{
       element.pause();
       element.currentTime = 0;
     });
-    audioList[index].play();
-    songs.forEach(elem=>{
-      elem.children[1].children[1].style.display = 'none';
-    });
-    elem.children[1].children[1].style.display = 'block';
+    if (isPlaying) {
+      audioList[index].pause();
+      isPlaying = false;
+      songs.forEach(elem=>{
+        elem.children[1].children[1].style.display = 'none';
+      });
+    } else {
+      audioList[index].play();
+      isPlaying = true;
+      elem.children[1].children[1].style.display = 'block';
+    }
   });
 });
 
 // PLAYER LOGIC
-const currentSongNumber = document.querySelector('.currentSongNumber');
-const previous = document.querySelector('.prevBtn');
-const justPlay = document.querySelector('.playBtn');
-const next = document.querySelector('.nextBtn');
 
 const audio1 = new Audio('../main-page-src-files/music-files/music1.mp3');
 const audio2 = new Audio('../main-page-src-files/music-files/music2.mp3');
@@ -51,49 +53,7 @@ const audio9 = new Audio('../main-page-src-files/music-files/music9.mp3');
 const audio10 = new Audio('../main-page-src-files/music-files/music10.mp3');
 
 let audioList = [audio1, audio2, audio3, audio4, audio5, audio6, audio7, audio8, audio9, audio10];
-
 let isPlaying = false;
-let currentSong = 0;
-let totalCount = audioList.length;
-
-audioList[currentSong].addEventListener('ended', nextSong);
-
-previous.addEventListener('click', prevSong);
-
-function prevSong(){
-    pauseTrack();
-    audioList[currentSong].currentTime = 0;
-    currentSong -= 1;
-    if (currentSong < 0) currentSong = totalCount-1;
-    playTrack();
-}
-
-next.addEventListener('click', nextSong);
-
-function nextSong(){
-    pauseTrack();
-    audioList[currentSong].currentTime = 0;
-    currentSong += 1;
-    if (currentSong > totalCount-1) currentSong = 0;
-    playTrack();
-}
-
-justPlay.addEventListener('click', ()=>{
-    if (isPlaying) { pauseTrack(); }
-    else { playTrack(); }
-});
-
-function pauseTrack(){
-    isPlaying = false;
-    audioList[currentSong].pause();
-    justPlay.innerHTML = '<i class="fas fa-play"></i>';
-}
-function playTrack(){
-    isPlaying = true;
-    audioList[currentSong].play();
-    justPlay.innerHTML = '<i class="fas fa-pause"></i>';
-}
-
 
 
 const menuBG = document.querySelector('.menuBG');
