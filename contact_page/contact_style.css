@@ -39,12 +39,11 @@ textarea {
     justify-content: space-between;
 }
 .headerMain .logoMain,.headerMain .navigationMain {
-    font-size: 18px;
+    cursor: pointer;
 }
 .headerMain .navigationMain i {
     margin-right: 5px;
     transition: 1s;
-    cursor: pointer;
 }
 .headerMain .navigationMain:hover i {
     transform: rotate(720deg);
@@ -99,6 +98,12 @@ textarea {
 }
 .submit:hover {
     background: rgba(255 255 255 / 30%);
+}
+.fa-check-circle {
+    background: transparent;
+    color: chartreuse;
+    font-size: 17px;
+    margin-right: 10px;
 }
 .navMenu {
     display: flex;

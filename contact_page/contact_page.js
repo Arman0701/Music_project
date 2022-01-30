@@ -1,11 +1,22 @@
 "use strict"
 
-const refreshChillZone = document.querySelector(".header_chill_zone1");
+const submitBtn = document.querySelector('.submit');
+const inputs = document.querySelectorAll('input');
+const textarea = document.querySelector('textarea');
 
-function refresh(){
-   let ref = window.location.reload();
-   return setTimeout(ref(),10000);
+submitBtn.addEventListener("click", ()=>{
+   clear();
+   setTimeout(()=>{
+      submitBtn.innerHTML = `<i class="far fa-check-circle"></i>Your review has been sent`;
+      setTimeout(()=>{
+         submitBtn.innerHTML = 'SEND';
+      }, 2700);
+   }, 1000);
+});
 
-};
-
-refreshChillZone.addEventListener("click",refresh);
+function clear(){
+   inputs.forEach(elem => {
+      elem.value = '';
+   });
+   textarea.value = '';
+}
