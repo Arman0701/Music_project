@@ -18,6 +18,7 @@ navMenuButton.addEventListener("click", ()=>{
 
 const songs = document.querySelectorAll('.songBox');
 let index;
+let elm;
 songs.forEach((elem)=>{
   elem.addEventListener('click', ()=>{
     index = +elem.getAttribute('data-index');
@@ -36,6 +37,7 @@ songs.forEach((elem)=>{
       isPlaying = true;
       elem.children[1].children[1].style.display = 'block';
     }
+    elm = elem;
   });
 });
 

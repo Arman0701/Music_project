@@ -15,7 +15,8 @@ a {
     color: black;
 }
 .navBar {
-    /* background: white; */
+    z-index: 1;
+    background: white;
     width: 100%;
     padding: 15px 25px;
     font-size: 17px;
@@ -49,11 +50,12 @@ a {
     padding-top: 100px;
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 .songBox {
-    padding: 0 80px;
-    width: calc(100% / 3);
+    margin: 0 20px;
+    width: 28%;
     margin-bottom: 50px;
     cursor: pointer;
 }
@@ -109,7 +111,7 @@ a {
     margin-right: 5px;
     padding: 0 5px;
 }
-.navBar {
+.navbar {
     width: 100%;
     padding: 15px 25px;
     font-size: 17px;
