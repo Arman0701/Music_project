@@ -17,6 +17,8 @@ navMenuButton.addEventListener("click", ()=>{
 });
 
 const songs = document.querySelectorAll('.songBox');
+let index;
+let elm;
 songs.forEach((elem)=>{
   elem.addEventListener('click', ()=>{
     let index = +elem.getAttribute('data-index');
@@ -24,22 +26,22 @@ songs.forEach((elem)=>{
       element.pause();
       element.currentTime = 0;
     });
-    if (!isPlaying){
-      isPlaying = true;
-    } else {
+    if (isPlaying) {
       audioList[index].pause();
       isPlaying = false;
+      songs.forEach(elem=>{
+        elem.children[1].children[1].style.display = 'none';
+      });
+    } else {
+      audioList[index].play();
+      isPlaying = true;
+      elem.children[1].children[1].style.display = 'block';
     }
-    audioList[index].play();
-
+    elm = elem;
   });
 });
 
 // PLAYER LOGIC
-const currentSongNumber = document.querySelector('.currentSongNumber');
-const previous = document.querySelector('.prevBtn');
-const justPlay = document.querySelector('.playBtn');
-const next = document.querySelector('.nextBtn');
 
 const audio1 = new Audio('../main-page-src-files/music-files/music1.mp3');
 const audio2 = new Audio('../main-page-src-files/music-files/music2.mp3');
@@ -53,9 +55,7 @@ const audio9 = new Audio('../main-page-src-files/music-files/music9.mp3');
 const audio10 = new Audio('../main-page-src-files/music-files/music10.mp3');
 
 let audioList = [audio1, audio2, audio3, audio4, audio5, audio6, audio7, audio8, audio9, audio10];
-
 let isPlaying = false;
-
 
 
 const menuBG = document.querySelector('.menuBG');

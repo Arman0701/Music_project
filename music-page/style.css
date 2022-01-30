@@ -14,7 +14,17 @@ a {
     text-decoration: none;
     color: black;
 }
-
+.navBar {
+    z-index: 1;
+    background: white;
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+}
 .fullPage {
     width: 100%;
     height: 100vh;
@@ -27,7 +37,6 @@ a {
 }
 .header_nav {
     cursor: pointer;
-    width: 10%;
     text-align: center;
 }
 .header_nav i {
@@ -41,15 +50,14 @@ a {
     padding-top: 100px;
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 .songBox {
-    padding: 0 80px;
-    width: calc(100% / 3);
+    margin: 0 20px;
+    width: 28%;
     margin-bottom: 50px;
-}
-.songBox:hover {
-    cursor: url();
+    cursor: pointer;
 }
 .imgWrapper {
     overflow: hidden;
@@ -63,10 +71,27 @@ a {
 .songImg:hover {
     transform: rotate(-5deg) scale(1.5);
 }
+.songNameWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .songName {
     font-size: 17px;
     margin-top: 10px;
 }
+.playingNow {
+    display: none;
+    animation: playingNow 5s linear infinite;
+    padding: 0 5px;
+    font-size: 25px;
+}
+@keyframes playingNow {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* NAVIGATION MENU */
 
@@ -86,11 +111,10 @@ a {
     margin-right: 5px;
     padding: 0 5px;
 }
-.navBar {
+.navbar {
     width: 100%;
     padding: 15px 25px;
-    padding-bottom: 0;
-    font-size: 18px;
+    font-size: 17px;
     display: flex;
     align-items: center;
     justify-content: space-between;
