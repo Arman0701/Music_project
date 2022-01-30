@@ -21,7 +21,7 @@ let index;
 let elm;
 songs.forEach((elem)=>{
   elem.addEventListener('click', ()=>{
-    index = +elem.getAttribute('data-index');
+    let index = +elem.getAttribute('data-index');
     audioList.forEach(element=>{
       element.pause();
       element.currentTime = 0;
