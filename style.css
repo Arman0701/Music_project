@@ -97,16 +97,14 @@ a {
 .navMenu {
     display: flex;
     align-items: center;
-}
-.navMenu:hover {
     cursor: pointer;
 }
 .navMenu:hover i {
     transform: rotate(720deg);
-    transition: 1.3s;
 }
 .navMenu i {
-    color: white;
+    transition: 1.3s;
+    color: crimson;
     margin-right: 5px;
     padding: 0 5px;
 }

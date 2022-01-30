@@ -55,7 +55,7 @@ a {
 }
 .songBox {
     margin: 0 20px;
-    width: 28%;
+    width: 27%;
     margin-bottom: 50px;
     cursor: pointer;
 }
@@ -104,10 +104,10 @@ a {
 }
 .navMenu:hover i {
     transform: rotate(720deg);
-    transition: 1.3s;
 }
 .navMenu i {
-    color: white;
+    color: crimson;
+    transition: 1.3s;
     margin-right: 5px;
     padding: 0 5px;
 }
