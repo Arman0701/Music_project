@@ -1,7 +1,7 @@
 # Music Player
 ____________________________
 
-![alt text for screen readers](../assets/img/Screenshot.png "Text to show on mouseover")
+![alt text for screen readers](../assets/img/Screenshot.png "Chill Zone")
 
 ## What is this?
 _____________
@@ -18,6 +18,18 @@ ______________
 * Music fan shop
 * No accounts
 * No ads
+  
+
+## Screenshots
+_________________
+
+
+![alt text for screen readers](../assets/img/Screenshot1.png "Menu bar")
+![alt text for screen readers](../assets/img/Screenshot2.png "Music bar")
+
+## License
+__________________
+
 
 
 
