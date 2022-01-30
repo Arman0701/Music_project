@@ -1,7 +1,8 @@
+
 # Music Player
 ____________________________
 
-![alt text for screen readers](./assets/img/Screenshot.png "Chill Zone")
+![alt text for screen readers](./assets/img/Screenshot3.png "Chill Zone")
 
 ## What is this?
 _____________
@@ -29,12 +30,3 @@ _________________
 
 ## License
 __________________
-
-
-
-
-
-
-
-
-
