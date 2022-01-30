@@ -21,6 +21,24 @@ const currentSongNumber = document.querySelector('.currentSongNumber');
 const previous = document.querySelector('.prevBtn');
 const justPlay = document.querySelector('.playBtn');
 const next = document.querySelector('.nextBtn');
+const muteBtnWrapper = document.querySelector('.muteBtnWrapper');
+muteBtnWrapper.addEventListener('click', ()=>{
+    muteBtnWrapper.innerHTML = '';
+    if (muted) {
+        mainPageAudio.volume = 0.5;
+        muteBtnWrapper.innerHTML = `<i class='fas fa-volume-up'></i>`;
+        muted = false;
+    } else {
+        mainPageAudio.volume = 0;
+        muteBtnWrapper.innerHTML = `<i class='fas fa-volume-mute'></i>`;
+        muted = true;
+      }
+});
+
+const mainPageAudio = new Audio('./main-page-src-files/campfire-1.mp3');
+mainPageAudio.play();
+mainPageAudio.loop = true;
+mainPageAudio.volume = 0;
 
 const audio1 = new Audio('./main-page-src-files/music-files/music1.mp3');
 const audio2 = new Audio('./main-page-src-files/music-files/music2.mp3');
@@ -34,9 +52,9 @@ const audio9 = new Audio('./main-page-src-files/music-files/music9.mp3');
 const audio10 = new Audio('./main-page-src-files/music-files/music10.mp3');
 
 let audioList = [audio1,audio2,audio3,audio4,audio5,
-                audio6,audio7,audio8,audio9,audio10
-];
+                 audio6,audio7,audio8,audio9,audio10];
 
+let muted = true;
 let isPlaying = false;
 let currentSong = 0;
 let totalCount = audioList.length;

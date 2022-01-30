@@ -91,6 +91,37 @@ a {
     border-color: white;
     transform: scale(1.1);
 }
+.muteBtnContainer {
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+}
+.muteBtnWrapper {
+    font-size: 20px;
+    color: white;
+    width: 2.5vw;
+    height: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.muteBtnWrapper:hover {
+    background: rgba(255 255 255 / 50%);
+    border-color: white;
+}
+.muteBtnText {
+    color: white;
+    font-size: 15px;
+}
 
 /* NAVIGATION MENU */
 
