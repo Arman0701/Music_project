@@ -1,9 +1,8 @@
 body {
-    font-family: Arial;
-    color: rgb(8, 0, 0);
-  }
+    font-family: 'roboto';
+}
   
-  .split {
+.split {
     height: 100%;
     width: 50%;
     position: fixed;
@@ -11,68 +10,66 @@ body {
     top: 0;
     overflow-x: hidden;
     padding-top: 20px;
-  }
-  
-  .left {
+}
+
+.left {
     left: 0;
     background-image: url("../assets/img/polo.jpg");
-  
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
     margin-right: 200px;
-  }
-  
-  #outer{
+}
+
+#outer{
     width:100%;
     text-align: right;
-  }
-  .started{
+}
+.started{
     display: inline-block;
     z-index: 1;
-  }
-  .right {
+}
+.right {
     right: 0;
     padding-left: 20px;
-    background-color: rgb(255, 255, 255);
-  }
-  
-  .centered {
+    background-color: white;
+}
+
+.centered {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    
-  }
-  .centered:hover {
+}
+.centered:hover {
     transition: transform 250ms;
     transform: translateX(-25px);
-  }
-  
-  .centered img {
+}
+
+.centered img {
     width: 150;
     border-radius: 50%;
-  }
-  
-  a {
+}
+
+a {
     text-decoration: none;
     display: inline-block;
     padding: 8px 16px;
-  }
-  
-  a:hover {
+}
+
+.previous {
+  background-color: #070000;
+  color: rgb(253, 253, 253);
+}
+.round {
+  border-radius: 50%;
+}
+a:hover {
     background-color: rgb(7, 0, 0);
-    color: black;
-  }
-  .previous {
-    background-color: #070000;
-    color: rgb(253, 253, 253);
-  }
-  .round {
-    border-radius: 50%;
-  }
-  .label {
+    color: white;
+}
+.label {
     appearance: none;
     background-color: transparent;
     border: none;
@@ -83,8 +80,8 @@ body {
     font-size: inherit;
     cursor: inherit;
     line-height: inherit;
-  }
-  .garbage_button {
+}
+.garbage_button {
     display: inline-block;
     list-style: none; 
     padding: 0.35em 1.2em;
@@ -97,38 +94,36 @@ body {
     color: #df5302;
     text-align: center;
     transition: all 0.2s;
-    font-weight: bold;
-     
-  }
-  #items #badge { /* hides the count badge on the shopping list */ 
+    font-weight: bold;  
+}
+#items #badge {
     display: none; 
 } 
-  .garbage_button:hover {
+.garbage_button:hover {
     color: #ffffff;
     background-color: #e40505;
-  }
-  @media all and (max-width: 30em) {
+}
+@media all and (max-width: 30em) {
     button.garbage_button {
-      display: block;
-      margin: 0.4em auto;
+        display: block;
+        margin: 0.4em auto;
     }
-  }
- 
-  .basketNum {
-    list-style: none;
+}
 
-   color: white;
-   z-index: 0;
-  }
-  #badge {
+.basketNum {
+    list-style: none;
+    color: white;
+    z-index: 0;
+}
+#badge {
     z-index: 1;
-     width: 20px; 
-     height: 20px; 
-     background-color: #f0ad4e; 
-     color: white; 
-     padding: 2px 2px; 
-     border-radius: 5px; 
-     margin-left: 10px; 
-     text-align: center; 
-     float: right; 
-     }
+    width: 20px; 
+    height: 20px; 
+    background-color: #f0ad4e; 
+    color: white; 
+    padding: 2px 2px; 
+    border-radius: 5px; 
+    margin-left: 10px; 
+    text-align: center; 
+    float: right; 
+}
