@@ -36,7 +36,9 @@ muteBtnWrapper.addEventListener('click', ()=>{
 });
 
 const mainPageAudio = new Audio('./main-page-src-files/campfire-1.mp3');
-mainPageAudio.play();
+setTimeout(()=>{
+  mainPageAudio.play();
+},1500);
 mainPageAudio.loop = true;
 mainPageAudio.volume = 0;
 
