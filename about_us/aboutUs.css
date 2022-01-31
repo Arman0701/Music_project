@@ -2,7 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: roboto;
+    font-family: roboto-medium;
+}
+@font-face {
+    font-family: roboto-medium;
+    src: url(../fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf);
 }
 .containerFull {
     width: 100%;

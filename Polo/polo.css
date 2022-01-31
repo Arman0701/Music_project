@@ -1,7 +1,10 @@
 body {
-    font-family: 'roboto';
+    font-family: roboto-medium;
 }
-  
+@font-face {
+    font-family: roboto-medium;
+    src: url(../fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf);
+  }
 .split {
     height: 100%;
     width: 50%;

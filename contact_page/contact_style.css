@@ -3,9 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
-    font-family: roboto;
+    font-family: roboto-medium;
     color: white;
     background: #000;
+}
+@font-face {
+    font-family: roboto-medium;
+    src: url(../fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf);
 }
 ::placeholder {
     color: white;

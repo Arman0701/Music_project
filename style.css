@@ -4,7 +4,7 @@
     box-sizing: border-box;
     user-select: none;
     color: white;
-    font-family: 'roboto-medium';
+    font-family: roboto-medium;
 }
 @font-face {
     font-family: roboto-medium;
