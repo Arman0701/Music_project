@@ -4,7 +4,11 @@
     box-sizing: border-box;
     user-select: none;
     color: white;
-    font-family: 'roboto';
+    font-family: 'roboto-medium';
+}
+@font-face {
+    font-family: roboto-medium;
+    src: url(./fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf);
 }
 body {
     background: #000;
