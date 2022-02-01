@@ -118,6 +118,7 @@ a {
     background: transparent;
     cursor: pointer;
     transition: 0.3s;
+    margin-right: 8px;
 }
 .muteBtnWrapper:hover {
     background: rgba(255 255 255 / 50%);
