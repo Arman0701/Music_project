@@ -121,24 +121,24 @@ menuList.forEach(elem => {
 });
 
 
-var smokeyness = 100;
-var density = 40;
+let smokeyness = 100;
+let density = 40;
 
-var swide = 800;
-var shigh = 600;
-var toke = new Array();
-var tokex = new Array();
-var tokedx = new Array();
-var tokey = new Array();
-var nicotine = new Array();
-var mousedown = false;
-var x = 400;
-var y = 300;
-var sleft = sdown = 0;
-var ie_version = (navigator.appVersion.indexOf("MSIE") != -1) ? parseFloat(navigator.appVersion.split("MSIE")[1]) : false;
+let swide = 800;
+let shigh = 600;
+let toke = new Array();
+let tokex = new Array();
+let tokedx = new Array();
+let tokey = new Array();
+let nicotine = new Array();
+let mousedown = false;
+let x = 400;
+let y = 300;
+let sleft = sdown = 0;
+let ie_version = (navigator.appVersion.indexOf("MSIE") != -1) ? parseFloat(navigator.appVersion.split("MSIE")[1]) : false;
 
 function addLoadEvent(funky) {
-  var oldonload = window.onload;
+  let oldonload = window.onload;
   if (typeof (oldonload) != 'function') window.onload = funky;
   else window.onload = function () {
     if (oldonload) oldonload();
@@ -150,7 +150,7 @@ addLoadEvent(puff);
 
 function puff() {
   if (document.getElementById) {
-    var i, fag;
+    let i, fag;
     for (i = 0; i < smokeyness; i++) {
       fag = document.createElement("div");
       toke[i] = fag.style;
@@ -168,12 +168,12 @@ function puff() {
     }
     set_scroll();
     set_width();
-    setInterval(drag, 25);
+    setInterval(drag, 50);
   }
 }
 
 function drag() {
-  var c;
+  let c;
   if (mousedown) for (c = 0; c < smokeyness; c++) if (tokey[c] === false) {
     toke[c].left = (tokex[c] = x - density / 2) + "px";
     toke[c].top = (tokey[c] = y - density) + "px";
@@ -190,7 +190,7 @@ document.onmousedown = function () { set_scroll(); if (ie_version) setTimeout('m
 document.onmouseup = function () { mousedown = false };
 
 function smoke_rising(i) {
-  var cancer;
+  let cancer;
   tokey[i] -= 4 + i % 3;
   tokex[i] += tokedx[i] - 0.5 + Math.random();
   if (tokey[i] > sdown - density * 2 && tokex[i] > sleft && tokex[i] < sleft + swide - density && (nicotine[i] += 2) < 256) {
@@ -223,8 +223,8 @@ function mouse(e) {
 
 window.onresize = set_width;
 function set_width() {
-  var sw_min = 999999;
-  var sh_min = 999999;
+  let sw_min = 999999;
+  let sh_min = 999999;
   if (document.documentElement && document.documentElement.clientWidth) {
     if (document.documentElement.clientWidth > 0) sw_min = document.documentElement.clientWidth;
     if (document.documentElement.clientHeight > 0) sh_min = document.documentElement.clientHeight;
