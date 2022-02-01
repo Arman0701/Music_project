@@ -13,7 +13,7 @@ p {
   padding: 100px 30px;
   width: 100%;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 800px;
 
 }
 
@@ -25,11 +25,11 @@ p {
  
 }
 
-  img {
-    object-fit: cover;
-    width: 100%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  }
+img {
+  object-fit: cover;
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
 
 .image-stack__item--bottom {
  
@@ -49,12 +49,41 @@ img {
   display: block;
 }
 .image-stack__item--top :hover{
- 
+  transition: transform .5s;
   transform: scale(1.1);
 }
 .image-stack__item--bottom :hover{
-
+  transition: transform .5s;
   transform: scale(1.1);
 }
 
+.empty-space{
+  padding: 150px;
+}
 
+.image-stack__item--bottom1 {
+ 
+  grid-row: 1;
+  grid-column: 1 / span 8;
+  padding-top: 20%; 
+}
+
+.image-stack__item--top1 {
+ 
+  grid-column: 4 / -1;
+  grid-row: 1;
+  
+ 
+}
+img {
+  width: 100%;
+  display: block;
+}
+.image-stack__item--top1 :hover{
+  transition: transform .5s;
+  transform: scale(1.1);
+}
+.image-stack__item--bottom1 :hover{
+  transition: transform .5s;
+  transform: scale(1.1);
+}
