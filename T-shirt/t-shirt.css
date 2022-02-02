@@ -1,8 +1,11 @@
 body {
-  font-family: Arial;
+  font-family: roboto-medium;
   color: rgb(8, 0, 0);
 }
-
+@font-face {
+  font-family: roboto-medium;
+  src: url(../fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf);
+}
 .split {
   height: 100%;
   width: 50%;

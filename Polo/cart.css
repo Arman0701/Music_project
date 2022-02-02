@@ -3,11 +3,14 @@ html, body{
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: roboto-medium;
     color: #aa052e;
     background-color: #F2F2F1;
   }
-  
+  @font-face {
+    font-family: roboto-medium;
+    src: url(../fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf);
+  }
   p, li, a{
     font-size: 14px;
     line-height: 160%;
