@@ -1,117 +1,93 @@
-* {
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    user-select: none;
-    font-family: roboto-medium;
     color: white;
-    background: #000;
+    font-family: roboto-medium;
 }
 @font-face {
     font-family: roboto-medium;
     src: url(../fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf);
 }
-::placeholder {
-    color: white;
+body {
+    background: #000;
 }
 ::-webkit-scrollbar {
     display: none;
 }
 a {
-    text-decoration: none;  
+    text-decoration: none;
 }
-input {
-    outline: none;
-    background: black;
-    color: white;
-    border-radius: 10px;
-    border: 1px solid white;
-}
-textarea {
-    outline: none;
-    border-radius: 10px;
-    border: 1px solid white;
-    padding: 10px;
-}
-.allContent {
+.mainPage {
     width: 100%;
     height: 100vh;
-}
-.headerMain {
-    padding: 25px 25px 0px;
-    position: fixed;
-    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    flex-direction: column;
 }
-.headerMain .logoMain,.headerMain .navigationMain {
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex; 
+    justify-content: space-between; 
+}
+.header_chill_zone {
+    z-index: 1;
+    width: 110px;
+    margin-left: 40px;
+    margin-top: 30px;
     cursor: pointer;
 }
-.headerMain .navigationMain i {
-    margin-right: 5px;
-    transition: 1s;
+.header_nav {
+    z-index: 1;
+    width: 110px;
+    margin-right: 40px;
+    margin-top: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
-.headerMain .navigationMain:hover i {
+.header_nav i {
+    margin-right: 10px;
+    transition: 1.3s;
+}
+.header_nav:hover i {
     transform: rotate(720deg);
 }
-.mainContent {
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-}
-.contentTitle {
-    font-size: 30px;
-    padding-top: 43px;
-    margin-bottom: 25px;
-}
-.regForm {
-    width: 100%;
-}
-.formMain {
+.main {
+    margin: 29vh 0;
+    min-height: 42vh;
+    border: 2px solid;
+    border-left: 0;
+    border-right: 0;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    overflow-x: auto;
 }
-.input {
-    width: 40%;
-    margin: 15px  5%;
-    padding: 10px;
-
+.artist {
+    overflow: hidden;
+    min-width: 400px;
+    height: 250px;
+    line-height: 250px;
+    text-align: center;
+    margin: 15px;
+    transition: 0.5s;
 }
-.input:focus {
-    background: white;
-    color: black;
+.artist:hover img {
+    transform: rotate(-5deg) scale(1.2);
 }
-.comments {
+.artist img {
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+}
+.artistName {
+    margin: 15px;
     color: white;
-    background: #000;
-    width: 90%;
-    padding-bottom: 12vh;
-    margin-bottom: 25px;
-    resize: none;
 }
-.comments:focus {
-    background: white;
-    color: black;
-}
-.submit {
-    display: inline;
-    padding: 15px 25px;
-    border: 1px solid white;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: 0.4s;
-}
-.submit:hover {
-    background: rgba(255 255 255 / 30%);
-}
-.fa-check-circle {
-    background: transparent;
-    color: chartreuse;
-    font-size: 17px;
-    margin-right: 10px;
-}
+
+/* NAVIGATION MENU */
+
 .navMenu {
     display: flex;
     align-items: center;
@@ -121,10 +97,10 @@ textarea {
 }
 .navMenu:hover i {
     transform: rotate(720deg);
-    transition: 1.3s;
 }
 .navMenu i {
-    color: white;
+    transition: 1.3s;
+    color: crimson;
     margin-right: 5px;
     padding: 0 5px;
 }
@@ -222,7 +198,7 @@ textarea {
     text-align: right;
     font-size: 17px;
 }
-.fa-heart {
+.footerText i {
     color: crimson;
     font-size: 17px;
     margin-right: 10px;
@@ -238,8 +214,10 @@ textarea {
     100% {
         opacity: 1;
     }
-}@keyframes loadingPage {
-    0% {
+}
+
+@keyframes loadingPage {
+    0% { 
         transform: rotate(90deg) scale(2);
     }
     93%{
@@ -251,18 +229,24 @@ textarea {
     100% {
         transform: rotate(0deg) scale(1);
     }
-}@keyframes closingPage {
+}
+
+@keyframes closingPage {
     0% {
         transform: rotate(0deg) scale(1);
     }
     100% {
         transform: rotate(90deg) scale(2);
     }
-}.breath {
-    animation: breathing 5s linear;
+}
+
+.breath {
+    animation: breathing 5s ease-in-out;
     animation-delay: 1s;
     animation-iteration-count: infinite;
-}@keyframes breathing {
+}
+
+@keyframes breathing {
     0% {
         color: rgba(220,20,60,1);
         transform: scale(1);
@@ -280,8 +264,3 @@ textarea {
         transform: scale(1);
     }
 }
-
-
-
-
-

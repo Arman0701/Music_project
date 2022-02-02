@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: roboto-medium;
+}
+@font-face {
+    font-family: roboto-medium;
+    src: url(../fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf);
 }
 .containerFull {
     width: 100%;
@@ -42,7 +47,7 @@ a {
     border-radius:15px;
     background-position: center;
     background-size: 100%;
-    background-image: url("./photos/272374735_360755672132301_262601641688079453_n.jpg");
+    background-image: url("./photos/imageMar.jpg");
     margin-top: 30%;
     margin-bottom: 20px;
     box-shadow: 26px 22px 45px -6px black;
@@ -55,7 +60,7 @@ a {
     height: 350px;
     border-radius:15px;
     background-position: center;
-    background-size: 108%;
+    background-size: 109%;
     background-image: url("./photos/depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg");
     margin-top: 30%;
     margin-bottom: 20px;
