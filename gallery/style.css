@@ -21,7 +21,7 @@ p {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr 4rem 1fr 5rem 1fr 10rem;
-  height: 740px;
+  height: 700px;
  
 }
 
@@ -261,5 +261,21 @@ img {
   100% {
       color: rgba(220,20,60,1);
       transform: scale(1);
+  }
+}
+@media screen and (max-width:479px){
+  .empty-space{
+    padding: 0%;
+  }
+  .image-stack{
+    height: 400px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width:767px){
+  .empty-space{
+    padding: 0%;
+  }
+  .image-stack{
+    height: 700px;
   }
 }
