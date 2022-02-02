@@ -46,9 +46,9 @@ a {
 }
 .header_nav i {
     margin-right: 10px;
+    transition: 1.3s;
 }
 .header_nav:hover i {
-    transition: 1.3s;
     transform: rotate(720deg);
 }
 .main {
