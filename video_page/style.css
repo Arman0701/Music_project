@@ -1,0 +1,267 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: roboto-medium;
+}
+@font-face {
+    font-family: roboto-medium;
+    src: url(../fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf);
+}
+body {
+    background: #000;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+a {
+    text-decoration: none;
+}
+.mainPage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex; 
+    justify-content: space-between; 
+}
+.header_chill_zone {
+    z-index: 1;
+    width: 110px;
+    margin-left: 40px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.header_nav {
+    z-index: 1;
+    width: 110px;
+    margin-right: 40px;
+    margin-top: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.header_nav i {
+    margin-right: 10px;
+    transition: 1.3s;
+}
+.header_nav:hover i {
+    transform: rotate(720deg);
+}
+.main {
+    margin: 17vh 0;
+    min-height: 66vh;
+    border: 2px solid;
+    border-left: 0;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+.artist {
+    overflow: hidden;
+    min-width: 35vw;
+    height: 40vh;
+    line-height: 250px;
+    text-align: center;
+    margin: 35px;
+    transition: 0.5s;
+}
+.artist:hover img {
+    transform: rotate(-5deg) scale(1.2);
+}
+.artist img {
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+}
+.artistName {
+    margin: 35px;
+    color: white;
+}
+
+/* NAVIGATION MENU */
+
+.navMenu {
+    display: flex;
+    align-items: center;
+}
+.navMenu:hover {
+    cursor: pointer;
+}
+.navMenu:hover i {
+    transform: rotate(720deg);
+}
+.navMenu i {
+    transition: 1.3s;
+    color: crimson;
+    margin-right: 5px;
+    padding: 0 5px;
+}
+.navBar {
+    width: 100%;
+    padding: 15px 25px;
+    padding-bottom: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    position: fixed;
+}
+.logo {
+    text-align: center;
+    width: 10%;
+    padding: 15px;
+    cursor: pointer;
+}
+.menuWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transform-origin: right bottom;
+}
+.loadingNavMenu {
+    display: block;
+    animation: loadingPage 3s linear;
+}
+.closeNavMenu {
+    display: block;
+    animation: closingPage 2s linear;
+}
+.menuBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    font-size: 185px;
+    color: crimson;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menuList {
+    width: 100%;
+    padding-top: 70px;
+    font-size: 31px;
+    background: transparent;
+}
+.listItem {
+    width: auto;
+    margin: 0 auto;
+    padding: 9px;
+    margin: 7px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+.listItem:hover {
+    animation: menuListAnim 1s linear;
+}
+.menuFooter {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    padding: 25px;
+    padding-bottom: 50px;
+}
+.contacts {
+    display: flex;
+    width: 82%;
+    padding-left: 37%;
+    font-size: 15px;
+}
+.contacts p {
+    margin: 0 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.contacts p:hover {
+    color: crimson;
+    animation: menuListAnim 0.3s linear;
+}
+.footerText {
+    width: 18%;
+    text-align: right;
+    font-size: 17px;
+}
+.footerText i {
+    color: crimson;
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+@keyframes menuListAnim {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loadingPage {
+    0% { 
+        transform: rotate(90deg) scale(2);
+    }
+    93%{
+        transform: rotate(0deg);
+    }
+    98% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes closingPage {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        transform: rotate(90deg) scale(2);
+    }
+}
+
+.breath {
+    animation: breathing 5s ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes breathing {
+    0% {
+        color: rgba(220,20,60,1);
+        transform: scale(1);
+    }
+    25% {
+        color: rgba(220,20,60,0.45);
+        transform: scale(0.96);
+    }
+    60% {
+        color: rgba(220,20,60,0.45);
+        transform: scale(0.96);
+    }
+    100% {
+        color: rgba(220,20,60,1);
+        transform: scale(1);
+    }
+}
