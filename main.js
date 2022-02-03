@@ -97,6 +97,7 @@ function pauseTrack() {
 function playTrack() {
   isPlaying = true;
   audioList[currentSong].play();
+  audioList[currentSong].addEventListener('ended', nextSong);
   justPlay.innerHTML = '<i class="fas fa-pause"></i>';
 }
 
