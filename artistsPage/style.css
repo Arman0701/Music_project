@@ -67,8 +67,8 @@ a {
 }
 .artist {
     overflow: hidden;
-    min-width: 550px;
-    height: 350px;
+    min-width: 35vw;
+    height: 40vh;
     line-height: 250px;
     text-align: center;
     margin: 35px;
