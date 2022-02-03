@@ -49,10 +49,13 @@ html, body{
   }
   
   .container{
-    width: 100%;
+    /* width: 100%;
     max-width: 940px;
     margin: 0 auto;
-    position: relative;
+    position: relative; */
+    display: flex;
+	  flex-wrap: wrap;
+	  padding: 100px;
   }
   
   /* CLEARFIX */
@@ -75,14 +78,14 @@ html, body{
     margin: 50px auto;
     padding: 20px 10px;
     background: linear-gradient(to right, #fff 40.73%, #b36500 40.83%);
-    position: relative;
+    /* position: relative; */
     overflow: hidden;
     color: #b36500;
   }
   
   .form-wrapper h2:after{
     content: "";
-    position: absolute;
+    /* position: absolute; */
     left: 0;
     bottom: -12px;
     width: 30px;
