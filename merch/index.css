@@ -79,3 +79,26 @@ a:link, a:visited {
 .itemImage:hover {
     transform: scale(1.1);
 }
+
+@media screen and (max-width:479px) {
+  
+  
+}
+@media screen and (min-width:480px) and (max-width:767px) {
+  
+  .itemImage{
+    height: auto;
+  }
+  .itemBox{
+    height: 400px;
+  }
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+  
+  .itemImage{
+    height: auto;
+  }
+  .itemBox{
+    height: 400px;
+  }
+}
