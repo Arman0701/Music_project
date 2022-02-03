@@ -2,6 +2,33 @@
 * {
   box-sizing: border-box;
 }
+.header {
+  display: flex; 
+  justify-content: space-between; 
+}
+.header_chill_zone {
+  z-index: 1;
+  width: 110px;
+  margin-left: 40px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.header_nav {
+  z-index: 1;
+  width: 110px;
+  margin-right: 40px;
+  margin-top: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.header_nav i {
+  margin-right: 10px;
+  transition: 1.3s;
+}
+.header_nav:hover i {
+  transform: rotate(720deg);
+}
 
 p {
   font-size: 20px;
