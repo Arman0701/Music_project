@@ -78,6 +78,19 @@ a {
     background-color: unset;
     font-size: 20px;
 }
+@media (max-width: 996px) {
+    .allCont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .containerFull {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(61, 61, 61);
+    }
+}
 
 
 
