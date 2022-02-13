@@ -1,23 +1,24 @@
+const menuWrapperBtn = document.querySelector('.menuWrapper');
+const allContentWrapper = document.querySelector('.all_content');
 const navBarButton = document.querySelector('.header_nav');
 navBarButton.addEventListener("click", () => {
-  document.querySelector('.menuWrapper').classList.remove('closeNavMenu');
-  document.querySelector('.menuWrapper').classList.add('loadingNavMenu');
-  document.querySelector('.all_content').style.display = 'none';
-  document.querySelector('.menuWrapper').style.display = 'block';
+  menuWrapperBtn.classList.remove('closeNavMenu');
+  menuWrapperBtn.classList.add('loadingNavMenu');
+  allContentWrapper.style.display = 'none';
+  menuWrapperBtn.style.display = 'block';
 })
 
 const navMenuButton = document.querySelector('.navMenu');
 navMenuButton.addEventListener("click", () => {
-  document.querySelector('.menuWrapper').classList.remove('loadingNavMenu');
-  document.querySelector('.menuWrapper').classList.add('closeNavMenu');
+  menuWrapperBtn.classList.remove('loadingNavMenu');
+  menuWrapperBtn.classList.add('closeNavMenu');
   setTimeout(() => {
-    document.querySelector('.menuWrapper').style.display = 'none';
-    document.querySelector('.all_content').style.display = 'block';
+    menuWrapperBtn.style.display = 'none';
+    allContentWrapper.style.display = 'block';
   }, 1950);
 });
 
 // PLAYER LOGIC
-const currentSongNumber = document.querySelector('.currentSongNumber');
 const previous = document.querySelector('.prevBtn');
 const justPlay = document.querySelector('.playBtn');
 const next = document.querySelector('.nextBtn');
@@ -100,8 +101,6 @@ function playTrack() {
   audioList[currentSong].addEventListener('ended', nextSong);
   justPlay.innerHTML = '<i class="fas fa-pause"></i>';
 }
-
-
 
 // NAVIGATION MENU
 const menuBG = document.querySelector('.menuBG');
